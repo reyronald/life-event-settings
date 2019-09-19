@@ -1,0 +1,49 @@
+.LifeEventSettings--spinner-container {
+  width: calc(100vw - 240px);
+  height: calc(100vh - 200px);
+}
+
+.LifeEventSettings--error {
+  margin-top: 32px;
+}
+
+.LifeEventSettings {
+  margin-top: 16px;
+
+  &.LifeEventSettings--updating {
+    opacity: 0.5;
+    cursor: wait;
+
+    > div {
+      pointer-events: none;
+    }
+  }
+
+  .edit-rules-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 144px;
+    height: 35px;
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .description {
+    max-width: 730px;
+  }
+
+  .tabs {
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    width: calc(100vw - 330px);
+  }
+
+  footer {
+    font-style: italic;
+  }
+}

@@ -1,0 +1,116 @@
+$mh-light-gray: #f1f2f7;
+$mh-med-gray: #e9eaf3;
+$mh-dark-gray: #818181;
+$mh-med-green: #b3c375;
+$mh-blue: #5db9d1;
+$mh-dark-text: #474747;
+$maxwell-blue: #5db9d1;
+
+.mui-Tabs.Tabs--primary {
+  * {
+    box-sizing: border-box;
+    font-family: Lato;
+  }
+
+  .Tabs--tabs {
+    height: 91px;
+    width: 100%;
+    background-color: $mh-light-gray;
+    display: flex;
+    padding: 23px 79px 0 79px;
+  }
+
+  .Tabs--tabs > *:not(:last-child) {
+    margin-right: 9px;
+  }
+
+  .Tabs--tabs > * {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    padding: 18px 16px;
+    background-color: $mh-med-gray;
+  }
+
+  .Tabs--tab--active {
+    background-color: white;
+  }
+
+  .Tabs--tab:not(.Tabs--tab--active) {
+    cursor: pointer;
+  }
+
+  .Tabs--tab-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.4;
+    color: $mh-blue;
+  }
+
+  .Tabs--tab--active .Tabs--tab-title {
+    color: black;
+  }
+
+  .Tabs--tab-subtitle {
+    color: $mh-dark-gray;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .Tabs--tab-content {
+    padding: 32px 79px 0 79px;
+  }
+}
+
+.mui-Tabs.Tabs--secondary {
+  .Tabs--tabs {
+    height: 54px;
+    width: 100%;
+    display: flex;
+  }
+
+  .Tabs--tabs > *:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .Tabs--tabs > * {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 7px 24.5px;
+    background-color: $mh-med-gray;
+  }
+
+  .Tabs--tab--active {
+    background-color: white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .Tabs--tab:not(.Tabs--tab--active) {
+    cursor: pointer;
+  }
+
+  .Tabs--tab-title {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 2.86;
+    color: $mh-dark-text;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .Tabs--tab--active .Tabs--tab-title {
+    color: $maxwell-blue;
+  }
+
+  .Tabs--tab-subtitle {
+    display: none;
+  }
+
+  .Tabs--tab-content {
+    background-color: white;
+  }
+}
