@@ -5,11 +5,19 @@ export type BenefitType = {
   type: string
   name: string
 }
+export type MemberChangeTypeFunctionalCategory =
+  | 'employee_add'
+  | 'employee_drop'
+  | 'dependent_add'
+  | 'dependent_drop'
+  | 'other'
+  | 'not_in_matrix'
 
 export type MemberChangeType = {
   id: string
   type: string
   name: string
+  functionalCategory: MemberChangeTypeFunctionalCategory
 }
 
 export type CommonState = {

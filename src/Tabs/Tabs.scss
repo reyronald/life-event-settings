@@ -1,10 +1,4 @@
-$mh-light-gray: #f1f2f7;
-$mh-med-gray: #e9eaf3;
-$mh-dark-gray: #818181;
-$mh-med-green: #b3c375;
-$mh-blue: #5db9d1;
-$mh-dark-text: #474747;
-$maxwell-blue: #5db9d1;
+@import '../colors.scss';
 
 .mui-Tabs.Tabs--primary {
   * {

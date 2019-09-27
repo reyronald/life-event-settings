@@ -1,0 +1,133 @@
+@import '../colors.scss';
+
+.mui-checkbox-v2 {
+  font-family: Lato;
+  text-align: left;
+  display: flex;
+
+  &.mui-checkbox__align-center {
+    text-align: center;
+    justify-content: center;
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.mui-checkbox__not-allowed-pointer {
+    label {
+      cursor: not-allowed;
+    }
+  }
+
+  &.mui-checkbox__disabled {
+    label {
+      cursor: default;
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  input + .mui-checkbox--checkmark {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 1px solid $maxwell-dark-blue;
+    background-color: white;
+  }
+
+  .mui-checkbox--labels-container {
+    margin-left: 14px;
+  }
+
+  &.mui-checkbox__disabled {
+    input + .mui-checkbox--checkmark {
+      border-color: $ghost;
+      background-color: $athens-gray;
+    }
+  }
+
+  input:checked + .mui-checkbox--checkmark {
+    background-color: $maxwell-dark-blue;
+  }
+
+  &.mui-checkbox__no-border {
+    input:checked + .mui-checkbox--checkmark {
+      border-color: white;
+      background-color: white;
+    }
+  }
+
+  &.mui-checkbox__disabled {
+    input:checked + .mui-checkbox--checkmark {
+      background-color: $athens-gray;
+    }
+  }
+
+  input + .mui-checkbox--checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  input:checked + .mui-checkbox--checkmark:after {
+    display: block;
+  }
+
+  input + .mui-checkbox--checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 9.8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  &.mui-checkbox__no-border {
+    input + .mui-checkbox--checkmark:after {
+      border-color: $maxwell-dark-blue;
+    }
+  }
+
+  &.mui-checkbox__disabled {
+    input + .mui-checkbox--checkmark:after {
+      border-color: $ghost;
+    }
+  }
+
+  .mui-checkbox--primary-label {
+    color: black;
+    font-size: 15px;
+    line-height: 1.27;
+  }
+
+  &.mui-checkbox__disabled {
+    .mui-checkbox--primary-label {
+      color: $gray;
+    }
+  }
+
+  .mui-checkbox--secondary-label {
+    color: $gray;
+    font-size: 14px;
+    line-height: 1.15;
+    visibility: hidden;
+    margin-top: 5px;
+  }
+
+  .mui-checkbox--secondary-label__visible {
+    visibility: visible;
+  }
+}
