@@ -14,7 +14,7 @@ export type Props = {
   secondaryLabel?: React.ReactNode
   className?: string
   inputProps?: {}
-}
+} & React.HTMLAttributes<HTMLDivElement>
 
 Checkbox.defaultProps = {
   align: 'left',

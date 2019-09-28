@@ -1,6 +1,8 @@
 import * as React from 'react'
-import * as classnames from 'classnames'
+import classnames from 'classnames'
 import Row from '../Row'
+
+import './ScrollButton.scss'
 
 export type Props = {
   disableLeft: boolean

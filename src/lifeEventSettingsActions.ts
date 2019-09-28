@@ -7,6 +7,7 @@ import {
   EmployerMatrixLogEntry,
   FetchState,
 } from './types'
+import * as api from './api'
 import { fetchBenefitTypes, fetchMemberChangeTypes } from './commonActions'
 import { AppState } from './configureStore'
 
@@ -80,7 +81,7 @@ export function fetchEmployerMatrix(): ThunkAction<
 
       dispatch({ type: 'FETCHING_EMPLOYER_MATRIX', employerId })
 
-      const result = { employerMatrix: [] }
+      const result = await api.getEmployerMatrix()
 
       if ('employerMatrix' in result) {
         const employerMatrix = fromEmployerMatrixItemsRaw(result.employerMatrix)

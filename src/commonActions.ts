@@ -1,6 +1,7 @@
 import { ThunkAction } from 'redux-thunk'
 import { AppState } from './configureStore'
 import { BenefitType, MemberChangeType } from './types'
+import * as api from './api'
 
 export type FetchBenefitTypesAction =
   | {
@@ -23,7 +24,7 @@ export function fetchBenefitTypes(): ThunkAction<
 > {
   return async dispatch => {
     dispatch({ type: 'FETCHING_BENEFIT_TYPES' })
-    const result = [{ id: '1', name: 'name', type: 'type' }]
+    const result = await api.getBenefitTypes()
     dispatch({ type: 'FETCHED_BENEFIT_TYPES', benefitTypes: result })
   }
 }
@@ -49,7 +50,7 @@ export function fetchMemberChangeTypes(): ThunkAction<
 > {
   return async dispatch => {
     dispatch({ type: 'FETCHING_MEMBERCHANGE_TYPES' })
-    const result = [{ id: '1', name: 'name', type: 'type' }]
+    const result = await api.getMemberChangeTypes()
     dispatch({
       type: 'FETCHED_MEMBERCHANGE_TYPES',
       memberChangeTypes: result,

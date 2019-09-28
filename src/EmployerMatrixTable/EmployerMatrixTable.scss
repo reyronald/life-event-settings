@@ -1,0 +1,115 @@
+.EmployerMatrixTable {
+  font-size: 15px;
+  line-height: 1.47;
+  letter-spacing: normal;
+  position: relative;
+
+  .shadow-borders-overlay {
+    position: absolute;
+    left: 224px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    &.left {
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      background-size: 15px 100%;
+      background-repeat: no-repeat;
+    }
+
+    &.right {
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      background-position-x: 100%;
+      background-size: 15px 100%;
+      background-repeat: no-repeat;
+    }
+
+    &.left-and-right {
+      background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.1),
+          rgba(255, 255, 255, 0)
+        ),
+        linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0))
+          100% 100%;
+      background-size: 15px 100%, 15px 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: inherit;
+
+    th {
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 0 16px;
+      height: 58px;
+      min-width: 80px;
+      font-weight: normal;
+      color: black;
+    }
+
+    tbody tr {
+      &:nth-child(odd) {
+        background-color: #fafbff;
+        > *:first-of-type {
+          background-color: #fafbff;
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: white;
+        > *:first-of-type {
+          background-color: white;
+        }
+      }
+    }
+
+    tr > *:first-of-type {
+      background-color: white;
+      border-right: solid 3px #e9eaf3;
+      min-width: 224px;
+      width: 224px;
+      position: sticky;
+      left: 0;
+      z-index: 1;
+    }
+
+    tr > *:nth-of-type(2) {
+      min-width: 259px;
+    }
+
+    tr > *:nth-of-type(n + 3) {
+      border-left: solid 1px #e9eaf3;
+      border-right: solid 1px #e9eaf3;
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  .scroll-button {
+    position: absolute;
+    right: 15px;
+    z-index: 2;
+
+    > div {
+      position: fixed;
+    }
+  }
+}

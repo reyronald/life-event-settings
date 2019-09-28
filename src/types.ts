@@ -1,9 +1,8 @@
 export type FetchState = 'uninitialized' | 'fetching' | 'fetched' | 'error'
 
 export type BenefitType = {
-  id: string
-  type: string
-  name: string
+  key: string
+  title: string
 }
 export type MemberChangeTypeFunctionalCategory =
   | 'employee_add'
@@ -15,8 +14,8 @@ export type MemberChangeTypeFunctionalCategory =
 
 export type MemberChangeType = {
   id: string
-  type: string
   name: string
+  description: string
   functionalCategory: MemberChangeTypeFunctionalCategory
 }
 

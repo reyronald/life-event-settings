@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-export default class Select extends React.Component {
+type Props = any // meh
+
+export default class Select extends React.Component<Props> {
   static displayName = 'Select'
 
   static propTypes = {

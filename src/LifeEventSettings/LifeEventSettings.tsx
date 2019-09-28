@@ -6,14 +6,14 @@ import {
   MemberChangeType,
   LifeEventRulesReadonlyState,
   EmployerMatrixItem,
-  DeepReadonlyObject,
   LifeEventRulesTableObject,
-} from './types'
-import EmployerMatrixTable from './EmployerMatrixTable'
-import Tabs from './Tabs'
+  MemberChangeTypeFunctionalCategory,
+} from '../types'
+import EmployerMatrixTable from '../EmployerMatrixTable'
+import Tabs from '../Tabs'
+import localize from '../localize'
 
 import './LifeEventSettings.scss'
-import localize from './localize'
 
 export interface Props {
   fetchLifeEventRules(): Promise<void>

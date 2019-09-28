@@ -1,13 +1,21 @@
 import * as React from 'react'
-import * as classnames from 'classnames'
+import classnames from 'classnames'
 import * as _ from 'lodash'
 import { forwardRef, useMemo } from 'react'
 import Row from '../Row'
 import Select from '../Select'
 import Checkbox from '../Checkbox'
-import { LifeEventRulesTableObject, EffectiveDateMode } from '../types'
+import {
+  LifeEventRulesTableObject,
+  EffectiveDateMode,
+  MemberChangeType,
+  BenefitType,
+} from '../types'
 import localize from '../localize'
 import ScrollButton from './ScrollButton'
+import { exhaustiveCheckFail } from '../commonReducer'
+
+import './EmployerMatrixTable.scss'
 
 export type Props = {
   variant: 'readonly' | 'edit'

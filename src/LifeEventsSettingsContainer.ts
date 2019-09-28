@@ -5,11 +5,14 @@ import {
   updateEmployerMatrix,
 } from './lifeEventSettingsActions'
 import LifeEventSettings, { Props } from './LifeEventSettings'
+import { BenefitType, MemberChangeType } from './types'
 
 const mapStateToProps = (state: AppState): Partial<Props> => {
   return {
-    benefitTypesRequest: state.common.benefitTypesRequest,
-    memberChangeTypesRequest: state.common.memberChangeTypesRequest,
+    benefitTypes: state.common.benefitTypesRequest
+      .benefitTypes as BenefitType[],
+    memberChangeTypes: state.common.memberChangeTypesRequest
+      .memberChangeTypes as MemberChangeType[],
     lifeEventRulesRequest: state.lifeEventSettings.lifeEventRulesRequest,
     employerMatrixRequest: state.lifeEventSettings.employerMatrixRequest,
     employerMatrixLogRequest: state.lifeEventSettings.employerMatrixLogRequest,
